@@ -355,7 +355,7 @@ class RPLidar(object):
         time.sleep(2)
         self.clean_input()
 
-    def iter_measures(self, scan_type='normal', max_buf_meas=3000):
+    def iter_measures(self, scan_type='normal', max_buf_meas=4000):
         '''Iterate over measures. Note that consumer must be fast enough,
         otherwise data will be accumulated inside buffer and consumer will get
         data with increasing lag.
@@ -421,7 +421,7 @@ class RPLidar(object):
                                             self.express_data.start_angle,
                                             self.express_trame)
 
-    def iter_scans(self, scan_type='normal', max_buf_meas=3000, min_len=5):
+    def iter_scans(self, scan_type='normal', max_buf_meas=4000, min_len=5):
         '''Iterate over scans. Note that consumer must be fast enough,
         otherwise data will be accumulated inside buffer and consumer will get
         data with increasing lag.
